@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FileSaverNullPathRepro.MainPage"
+             Title="FileSaver Null Path Repro">
+
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label
+            Text="CommunityToolkit.Maui FileSaver repro"
+            FontSize="22"
+            SemanticProperties.HeadingLevel="Level1" />
+
+        <Label
+            Text="Use the first button to pass null to the initialPath overload. The second button uses the no-path overload as a control."
+            LineBreakMode="WordWrap" />
+
+        <Button
+            Text="Save with null initialPath (repro)"
+            Clicked="OnNullInitialPathClicked" />
+
+        <Button
+            Text="Save without initialPath (control)"
+            Clicked="OnNoInitialPathClicked" />
+
+        <Label
+            x:Name="StatusLabel"
+            Text="Ready"
+            LineBreakMode="WordWrap" />
+    </VerticalStackLayout>
+
+</ContentPage>
